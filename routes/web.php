@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Home
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', [
+        'title' => 'My first Laravel title',
+        'subtitle' => 'My second Laravel title'
+    ]);
+});
+// About us
+Route::get('/about', function () {
+    return view('about');
 });
